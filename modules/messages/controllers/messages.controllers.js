@@ -20,10 +20,10 @@ const getMessages =async (req , res)=>{
     
    
     try {
-        const messages = await Messages.find()
+        const messages = await Messages.find({})
         res.json({msg:`success`,messages})
        
-        
+
         
     } catch (error) {
         res.json({msg: 'error in get message',error})
